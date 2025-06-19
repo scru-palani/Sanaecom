@@ -185,21 +185,25 @@ const Contact = () => {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 ">
               <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                <h3 className="text-xl font-semibold mb-2">Service 1</h3>
+                <h3 className="text-xl font-semibold mb-2">
+                  Website Development Services
+                </h3>
                 <p className="text-gray-600">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
                   quam velit.
                 </p>
               </div>
               <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                <h3 className="text-xl font-semibold mb-2">Service 2</h3>
+                <h3 className="text-xl font-semibold mb-2">
+                  Digital Marketing Services
+                </h3>
                 <p className="text-gray-600">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
                   quam velit.
                 </p>
               </div>
               <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                <h3 className="text-xl font-semibold mb-2">Service 3</h3>
+                <h3 className="text-xl font-semibold mb-2">Logo Designing</h3>
                 <p className="text-gray-600">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
                   quam velit.
