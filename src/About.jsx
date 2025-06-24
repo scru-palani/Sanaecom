@@ -416,7 +416,7 @@ const About = () => {
           <div className="border-t border-gray-700 mt-8 pt-6 text-center">
             <p>
               &copy; {new Date().getFullYear()}{" "}
-              <a href="google.com" target="blank">
+              <a href="/" target="blank">
                 Sana Industry
               </a>
               . All rights reserved.

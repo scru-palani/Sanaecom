@@ -264,50 +264,173 @@ const Contact = () => {
             <h1 className="text-3xl font-bold mb-6 text-gray-800">
               Contact Us
             </h1>
-            <p className="text-2xl text-gray-800 mb-4">
-              M. Palanikumar React Developer
-            </p>
-            <p className="text-gray-600 mb-4">
-              Passionate React developer with 1+ years of experience creating
-              dynamic, user-friendly web applications. I specialize in modern
-              JavaScript frameworks and have a strong background in full-stack
-              development. I love turning complex problems into simple,
-              beautiful, and intuitive solutions that provide exceptional user
-              experiences. To work in a competitive environment on challenging
-              assignments to utilize my knowledge & talents for the enhancement
-              of the organization and my personal fronts.
-            </p>
+            <a
+              href="https://celadon-youtiao-d42f8f.netlify.app/"
+              target="_blank"
+            >
+              <p className="text-2xl text-gray-800 mb-4">
+                M. Palanikumar React Developer
+              </p>
+              <p className="text-gray-600 mb-4">
+                I am a skilled professional with over 1 year of experience in
+                React and PHP development, along with expertise as a Digital
+                Brand Strategist and Graphic Designer. I build dynamic,
+                user-centric web applications, solve real-world problems with
+                clean code, and design engaging digital experiences that align
+                with brand goals. With a strong foundation in full-stack
+                development and creative strategy, I thrive in collaborative,
+                fast-paced environments where innovation meets impact. My
+                passion lies in turning complex challenges into intuitive,
+                functional, and visually appealing solutions that drive growth
+                for both businesses and users.
+              </p>{" "}
+            </a>
           </section>
 
           <section className="mb-12">
             <h2 className="text-2xl font-bold mb-4 text-gray-800">
               Our Services
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 ">
+            <div className="grid grid-cols-1 md:grid-cols-1 gap-6 ">
               <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
                 <h3 className="text-xl font-semibold mb-2">
                   Website Development Services
                 </h3>
-                <p className="text-gray-600">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-                  quam velit.
-                </p>
+                <ul className="text-gray-600 list-disc list-inside space-y-1">
+                  <li>MERN Stack: MongoDB, Express.js, React, Node.js</li>
+                  <li>LAMP Stack: Linux, Apache, MySQL, PHP</li>
+                  <li>Deployment: Vercel, Netlify</li>
+                  <li>Git & GitHub version control</li>
+                </ul>
               </div>
               <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
                 <h3 className="text-xl font-semibold mb-2">
                   Digital Marketing Services
                 </h3>
-                <p className="text-gray-600">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-                  quam velit.
-                </p>
+                <div className="space-y-8 text-gray-700">
+                  {/* SEO */}
+                  <div>
+                    <h3 className="text-xl font-semibold flex items-center gap-2">
+                      🔍 Search Engine Optimization (SEO)
+                    </h3>
+                    <ul className="list-disc list-inside space-y-1 mt-2">
+                      <li>On-page SEO (meta tags, headings, alt text)</li>
+                      <li>
+                        Technical SEO (site speed, schema markup, sitemaps)
+                      </li>
+                      <li>Keyword research & competitor analysis</li>
+                      <li>Link building strategies</li>
+                      <li>Google Search Console setup</li>
+                      <li>SEO audits & reporting</li>
+                    </ul>
+                  </div>
+
+                  {/* SEM */}
+                  <div>
+                    <h3 className="text-xl font-semibold flex items-center gap-2">
+                      🎯 Search Engine Marketing (SEM)
+                    </h3>
+                    <ul className="list-disc list-inside space-y-1 mt-2">
+                      <li>Google Ads (Search, Display, Video)</li>
+                      <li>Bing Ads setup</li>
+                      <li>Campaign planning & keyword bidding</li>
+                      <li>A/B testing ad creatives</li>
+                      <li>Conversion tracking & ROI analysis</li>
+                    </ul>
+                  </div>
+
+                  {/* SMM */}
+                  <div>
+                    <h3 className="text-xl font-semibold flex items-center gap-2">
+                      📱 Social Media Marketing (SMM)
+                    </h3>
+                    <ul className="list-disc list-inside space-y-1 mt-2">
+                      <li>Facebook, Instagram, LinkedIn, Twitter marketing</li>
+                      <li>Paid advertising (Meta Ads Manager, LinkedIn Ads)</li>
+                      <li>Content calendars & strategy</li>
+                      <li>Hashtag optimization</li>
+                      <li>Influencer outreach & collaboration</li>
+                    </ul>
+                  </div>
+
+                  {/* Email Marketing */}
+                  <div>
+                    <h3 className="text-xl font-semibold flex items-center gap-2">
+                      📧 Email Marketing
+                    </h3>
+                    <ul className="list-disc list-inside space-y-1 mt-2">
+                      <li>
+                        Email campaign design & automation (Mailchimp,
+                        Sendinblue, Klaviyo)
+                      </li>
+                      <li>List segmentation</li>
+                      <li>A/B testing subject lines & CTAs</li>
+                      <li>Drip campaigns</li>
+                      <li>Analytics (open rate, click-through, bounce rate)</li>
+                    </ul>
+                  </div>
+
+                  {/* Analytics */}
+                  <div>
+                    <h3 className="text-xl font-semibold flex items-center gap-2">
+                      📊 Analytics & Reporting
+                    </h3>
+                    <ul className="list-disc list-inside space-y-1 mt-2">
+                      <li>Google Analytics (GA4)</li>
+                      <li>Google Tag Manager</li>
+                      <li>Conversion rate optimization (CRO)</li>
+                      <li>Dashboard creation (Looker Studio, Excel, etc.)</li>
+                    </ul>
+                  </div>
+
+                  {/* E-Commerce Marketing */}
+                  <div>
+                    <h3 className="text-xl font-semibold flex items-center gap-2">
+                      🛍️ E-Commerce Marketing
+                    </h3>
+                    <ul className="list-disc list-inside space-y-1 mt-2">
+                      <li>Product feed optimization (Google Shopping)</li>
+                      <li>Shopify / WooCommerce marketing setup</li>
+                      <li>Abandoned cart recovery strategies</li>
+                      <li>Seasonal & retargeting campaigns</li>
+                    </ul>
+                  </div>
+
+                  {/* Content Marketing */}
+                  <div>
+                    <h3 className="text-xl font-semibold flex items-center gap-2">
+                      🧠 Content Marketing
+                    </h3>
+                    <ul className="list-disc list-inside space-y-1 mt-2">
+                      <li>Blog strategy & SEO writing</li>
+                      <li>Copywriting for ads & landing pages</li>
+                      <li>Video marketing (YouTube optimization)</li>
+                      <li>Visual content tools (Canva, Figma, Adobe)</li>
+                    </ul>
+                  </div>
+                </div>
               </div>
               <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                <h3 className="text-xl font-semibold mb-2">Logo Designing</h3>
-                <p className="text-gray-600">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-                  quam velit.
-                </p>
+                <div className="space-y-4 text-gray-700">
+                  <h3 className="text-xl font-semibold flex items-center gap-2">
+                    🎨 Logo Designing
+                  </h3>
+                  <ul className="list-disc list-inside space-y-1">
+                    <li>Brand research and competitor analysis</li>
+                    <li>Typography and font pairing expertise</li>
+                    <li>Vector design using Adobe Illustrator / Figma</li>
+                    <li>Scalable logo creation (responsive logos)</li>
+                    <li>Color theory and palette selection</li>
+                    <li>Monogram, wordmark, and icon-based logo design</li>
+                    <li>Logo grid systems and symmetry usage</li>
+                    <li>
+                      High-resolution export in multiple formats (SVG, PNG, PDF)
+                    </li>
+                    <li>Black & white, colored, and inverted logo variants</li>
+                    <li>Minimalist, 3D, and abstract style variations</li>
+                    <li>Logo mockups for print, web, and social media</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </section>
@@ -404,7 +527,7 @@ const Contact = () => {
           <div className="border-t border-gray-700 mt-8 pt-6 text-center">
             <p>
               &copy; {new Date().getFullYear()}{" "}
-              <a href="google.com" target="blank">
+              <a href="/" target="blank">
                 Sana Industry
               </a>
               . All rights reserved.

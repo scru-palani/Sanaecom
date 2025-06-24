@@ -7,6 +7,8 @@ const Home = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [activeCategory, setActiveCategory] = useState("All");
   const [menuOpen, setMenuOpen] = useState(false);
+  const [showPopupId, setShowPopupId] = useState(null);
+  const [showCart, setShowCart] = useState(false);
 
   const links = [
     { name: "Home", url: "/" },
@@ -292,7 +294,10 @@ const Home = () => {
           </div>
           {/* Cart Icon */}
           <div className="relative">
-            <button className="flex items-center hover:text-blue-200">
+            <button
+              className="flex items-center hover:text-blue-200"
+              onClick={() => setShowCart(true)}
+            >
               <svg
                 className="w-6 h-6"
                 fill="none"
@@ -314,6 +319,55 @@ const Home = () => {
               )}
             </button>
           </div>
+
+          {/* Cart Modal */}
+          {showCart && (
+            <div className="fixed inset-0 z-50 flex">
+              {/* Semi-transparent background for the rest of the screen */}
+              <div
+                className="flex-grow"
+                onClick={() => setShowCart(false)}
+              ></div>
+
+              {/* Cart Sidebar */}
+              <div className="w-full sm:w-96 bg-white h-full shadow-2xl relative overflow-y-auto">
+                <button
+                  onClick={() => setShowCart(false)}
+                  className="absolute top-4 right-4 text-gray-600 hover:text-black"
+                >
+                  ✕
+                </button>
+                <div className="p-6">
+                  <h2 className="text-xl font-bold mb-4 text-black">
+                    Your Cart
+                  </h2>
+                  <ul className="divide-y divide-gray-200 mb-4 text-black">
+                    {cartItems.map((item, index) => (
+                      <li key={index} className="py-2 flex justify-between">
+                        <img
+                          src={item.image}
+                          alt={item.name}
+                          className="w-16 h-16 object-cover rounded border border-gray-300"
+                        />
+                        <span>{item.name}</span>
+                        <span>₹{item.price}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <p className="text-right font-bold mb-4 text-black">
+                    Total: ₹
+                    {cartItems
+                      .reduce((total, item) => total + item.price, 0)
+                      .toFixed(2)}
+                  </p>
+                  <button className="bg-green-600 text-white w-full py-2 rounded hover:bg-green-700">
+                    Proceed to Payment
+                  </button>
+                </div>
+              </div>
+            </div>
+          )}
+
           {/* Mobile Menu Button */}
           <div className="md:hidden relative">
             {/* Logo & Hamburger */}
@@ -434,28 +488,58 @@ const Home = () => {
                 <img
                   src={product.image}
                   alt={product.name}
-                  className="w-100 h-48 px-12 object-cover rounded-lg"
+                  className="w-full h-48 object-cover"
                 />
                 <div className="p-4">
-                  <h3 className="font-bold text-lg mb-2">{product.name}</h3>
-                  <p className="text-gray-600 text-sm mb-2">
+                  <h3 className="font-bold text-lg mb-1">{product.name}</h3>
+                  <p className="text-gray-500 text-sm mb-1">
                     {product.category}
                   </p>
-                  <p className="text-gray-700 mb-4">
-                    Price: &#8377;{product.price}
+                  <p className="text-gray-700 font-semibold mb-4">
+                    ₹{product.price}
                   </p>
-                  <div className="flex justify-between">
-                    <button className="bg-gray-200 text-gray-800 px-3 py-2 rounded text-sm hover:bg-gray-300 transition duration-300">
+
+                  <div className="flex justify-between items-center">
+                    <button
+                      onClick={() => setShowPopupId(product.id)}
+                      className="bg-gray-200 text-gray-800 px-3 py-2 rounded text-sm hover:bg-gray-300 transition"
+                    >
                       View Product
                     </button>
                     <button
                       onClick={() => addToCart(product)}
-                      className="bg-blue-600 text-white px-3 py-2 rounded text-sm hover:bg-blue-700 transition duration-300"
+                      className="bg-blue-600 text-white px-3 py-2 rounded text-sm hover:bg-blue-700 transition"
                     >
                       Add to Cart
                     </button>
                   </div>
                 </div>
+
+                {/* Modal Popup */}
+                {showPopupId === product.id && (
+                  <div className="fixed inset-0 bg-opacity-50 flex items-center justify-center z-50">
+                    <div className="bg-white p-6 rounded shadow-2xl border-2 w-80 relative">
+                      <button
+                        onClick={() => setShowPopupId(null)}
+                        className="absolute top-2 right-3 text-gray-600 hover:text-black"
+                      >
+                        ✕
+                      </button>
+                      <img
+                        src={product.image}
+                        alt={product.name}
+                        className="w-full h-40 object-cover rounded mb-4"
+                      />
+                      <h2 className="text-xl font-bold mb-1">{product.name}</h2>
+                      <p className="text-gray-600 mb-1">
+                        Category: {product.category}
+                      </p>
+                      <p className="text-gray-800 font-semibold">
+                        ₹{product.price}
+                      </p>
+                    </div>
+                  </div>
+                )}
               </div>
             ))}
           </div>
